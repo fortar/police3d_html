@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" -->
+  <!-- integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <style>
+
+    .col-3 {
+      padding: 3px;
+    }
+
+    .card-body,
+    .card-header {
+      padding: 5px;
+    }
+
+    .card-header {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+
+    .card-body {
+      height: 100%;
+    }
+
+    .all-house>* {
+      line-height: 35px;
+      background: #1ABC9C;
+      border: #ECF0F1 3px solid;
+
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .house {
+      background: #ECF0F1;
+    }
+
+    .row {
+      margin: 0;
+    }
+
+    .house,
+    .all-house {
+      margin: 20px 0;
+
+    }
+
+
+    .human>.card-body {
+      margin: 10px 0;
+    }
+
+    .house-flag {
+      position: absolute;
+      top: 3px;
+      right: 10px;
+      text-align: center;
+      background: #E74C3C;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 50%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .col-4.title {
+      color: #2C3E50;
+      font-size: 16px;
+    }
+
+    .ms-over {
+      background: #F1C40F;
+    }
+
+    .ms-over img {
+      opacity: 0.8;
+    }
+
+    .icon-star {
+      position: absolute;
+      right: 0px;
+      bottom: 25px;
+      color: #E74C3C;
+    }
+
+    .icon-reply {
+      color: #fff;
+      position: absolute;
+      top: 2px;
+      left: 4px;
+      font-size: 20px;
+    }
+
+    .icon-reply>span {
+      font-size: 14px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- <div style="background: #ff9966;width:400px;">123</div> -->
+  <div class="container">
+    <div class="card">
+
+      <div class="card-header text-center bg-primary text-white">
+        <i class="icon-reply"><span>看栋</span></i>
+        基本信息
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-4 title text-right">标准地址：</div>
+          <div class="col-8 text-left">中山路19号21栋1单元12层</div>
+        </div>
+        <div class="row">
+          <div class="col-4 title text-right">实有人口：</div>
+          <div class="col-8 text-left">26</div>
+        </div>
+        <div class="row">
+          <div class="col-4 title  text-right">实有房屋：</div>
+          <div class="col-8 text-left">6</div>
+        </div>
+        <div class="row">
+          <div class="col-4 title text-right">实有单位：</div>
+          <div class="col-8 text-left">0</div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header text-center bg-primary text-white">楼层平面图：</div>
+              <img src="images/floor.png" alt="">
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header text-center bg-primary text-white">
+                该层所有房屋：
+              </div>
+              <div class="row all-house">
+
+                <div class="col-3 room">
+                  <div class="title">1201室</div>
+                  <span>4人</span>
+                </div>
+                <div class="col-3 room">
+                  <div class="title">1202室</div>
+                  <span>6人</span>
+                </div>
+                <div class="col-3 room">
+                  <div class="title">1203室</div>
+                  <span>4人</span>
+                </div>
+                <div class="col-3 room">
+                  <div class="title">1205室</div>
+                  <span>2人</span>
+                </div>
+                <div class="col-3 room">
+                  <div class="title">1206室</div>
+                  <span>1人</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script>
+    $(function () {
+
+
+      
+
+      $(".all-house>div").click(function () {
+        window.location.href = "house.html"
+      });
+      $(".all-house>div").mouseover(function () {
+        $(this).addClass("ms-over");
+        this.style.cursor = 'pointer';
+      }).mouseout(function () {
+        $(this).removeClass("ms-over");
+      })
+
+      $(".icon-reply").click(function () {
+        window.location.href = "building.html"
+      });
+      $(".icon-reply").mouseover(function () {
+        this.style.cursor = 'pointer';
+      })
+
+    })
+  </script>
+</body>
+
+</html>

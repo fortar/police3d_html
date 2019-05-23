@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" -->
+  <!-- integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+    .card-body,
+    .card-header {
+      padding: 5px;
+    }
+
+    .card-header {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .title {
+      font-weight: bold;
+    }
+
+    .col-4.title {
+      color: #2C3E50;
+      font-size: 16px;
+    }
+
+    .row {
+      margin: 0px;
+    }
+
+    .floor {
+      background: #2ECC71;
+
+      color: #fff;
+      border: solid 5px #ECF0F1;
+      text-align: center;
+      padding: 10px;
+    }
+    .ms-over {
+      background: #F1C40F;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header title text-center bg-primary text-white">基本信息</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-4 title text-right">标准地址：</div>
+          <div class="col-8 text-left">中山路19号21栋1单元</div>
+        </div>
+        <div class="row">
+          <div class="col-4 title text-right">实有人口：</div>
+          <div class="col-8 text-left">526</div>
+        </div>
+        <div class="row">
+          <div class="col-4 title  text-right">实有房屋：</div>
+          <div class="col-8 text-left">148</div>
+        </div>
+        <div class="row">
+          <div class="col-4 title text-right">实有单位：</div>
+          <div class="col-8 text-left">0</div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <div class="card-header title text-center bg-primary text-white">楼层情况</div>
+      <div class="card-body" id="floor_list"></div>
+      <!-- <div class="row">
+          <div class="col-3 floor">
+            <div class="title">1层</div>
+            <span>5户</span>
+            <span>15人</span>
+          </div>
+          <div class="col-3 floor">
+              <div class="title">2层</div>
+              <span>5户</span>
+              <span>15人</span>
+            </div>
+            <div class="col-3 floor">
+                <div class="title">3层</div>
+                <span>5户</span>
+                <span>15人</span>
+              </div>
+              <div class="col-3 floor">
+                  <div class="title">4层</div>
+                  <span>5户</span>
+                  <span>15人</span>
+                </div>
+        </div> -->
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(function () {
+      var floor = 1;
+      var max_floor = 26;
+      var max = 28;
+      var min = 12;
+
+      for (var i = 0; i < 8; i++) {
+
+        var row = $("<div class='row'></div>")
+        for (var j = 0; j < 4; j++) {
+          if (floor > max_floor) {
+            break;
+          }
+          row.append($(
+            '<div class="col-3 floor">\
+              <div class= "title" > '+ floor + '层</div >\
+              <span>5户</span>\
+              <span>'+ parseInt(Math.random() * (max - min + 1) + min, 10) + '人</span>\
+            </div >'
+          ))
+          floor++;
+        }
+        $("#floor_list").append(row)
+      }
+
+      $(".floor").click(function () {
+        window.location.href = "floor.html"
+      });
+      $(".floor").mouseover(function () {
+        $(this).addClass("ms-over");
+        this.style.cursor = 'pointer';
+      }).mouseout(function () {
+        $(this).removeClass("ms-over");
+      })
+
+    })
+  </script>
+</body>
+
+</html>
